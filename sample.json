@@ -26,7 +26,7 @@
       "when": "2024-07-15",
       "who": ["Anna Lee", "John Lee"],
       "where": ["Golden Gate Park, San Francisco, CA"],
-      "what": "Anna pouring orange juice; John taking a selfie; clarified as a brunch picnic.",
+      "what": "Anna pouring orange juice. John taking a selfie. Clarified as a brunch picnic.",
       "image_url": "",
       "conversation": [
         { "user": "We had brunch food, not lunch." },
@@ -81,4 +81,5 @@
       "evidence": ["u100_p03"]
     }
   ]
+
 }

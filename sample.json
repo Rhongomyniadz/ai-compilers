@@ -1,0 +1,109 @@
+{
+  "user_id": "u100",
+  "photos": [
+    {
+      "photo_id": "u100_e01_p01",
+      "event_id": "u100_e01",
+      "caption": "John and his sister Anna are setting up a picnic blanket near Golden Gate Park.",
+      "exif": {
+        "timestamp": "2024-07-15T11:20:00Z",
+        "lat": 37.7694,
+        "lng": -122.4862,
+        "device": "Pixel 7"
+      },
+      "tags": {
+        "who": ["John Lee", "Anna Lee"],
+        "what": ["picnic", "blanket", "outdoor"],
+        "where_name": "Golden Gate Park, San Francisco, CA"
+      },
+      "convo": [
+        {"role": "user", "text": "That's my sister Anna."},
+        {"role": "assistant", "text": "Got it — Anna = the woman in the blue dress."}
+      ]
+    },
+    {
+      "photo_id": "u100_e01_p02",
+      "event_id": "u100_e01",
+      "caption": "Anna is pouring orange juice while John takes a selfie.",
+      "exif": {
+        "timestamp": "2024-07-15T11:45:00Z",
+        "lat": 37.7691,
+        "lng": -122.4865,
+        "device": "Pixel 7"
+      },
+      "tags": {
+        "who": ["Anna Lee", "John Lee"],
+        "what": ["orange juice", "selfie"],
+        "where_name": "Golden Gate Park, San Francisco, CA"
+      },
+      "convo": [
+        {"role": "user", "text": "We had brunch food, not lunch."},
+        {"role": "assistant", "text": "Updated: this is brunch picnic."}
+      ]
+    },
+    {
+      "photo_id": "u100_e01_p03",
+      "event_id": "u100_e01",
+      "caption": "John's friend Miguel arrived late and joined them near the rose garden.",
+      "exif": {
+        "timestamp": "2024-07-15T12:30:00Z",
+        "lat": 37.7700,
+        "lng": -122.4830,
+        "device": "iPhone 13"
+      },
+      "tags": {
+        "who": ["John Lee", "Anna Lee", "Miguel Torres"],
+        "what": ["rose garden", "friends gathering"],
+        "where_name": "Golden Gate Park, San Francisco, CA"
+      },
+      "convo": [
+        {"role": "user", "text": "Miguel showed up around 12:30 after work."}
+      ]
+    }
+  ],
+  "events": [
+    {
+      "event_id": "u100_e01",
+      "user_id": "u100",
+      "title": "Brunch Picnic at Golden Gate Park",
+      "start_time": "2024-07-15T11:00:00Z",
+      "end_time": "2024-07-15T13:00:00Z",
+      "location_center": [37.7695, -122.4855],
+      "members": ["John Lee", "Anna Lee", "Miguel Torres"],
+      "photo_ids": ["u100_e01_p01", "u100_e01_p02", "u100_e01_p03"],
+      "narrative_gold": "John and his sister Anna organized a brunch picnic at Golden Gate Park. They enjoyed food and drinks, and Miguel joined later at the rose garden."
+    }
+  ],
+  "qas": [
+    {
+      "qid": "qa_001",
+      "question": "Who was John with at the beginning of the picnic?",
+      "answer_gold": ["Anna Lee"],
+      "evidence": ["u100_e01_p01"]
+    },
+    {
+      "qid": "qa_002",
+      "question": "What kind of meal did they describe it as?",
+      "answer_gold": "Brunch",
+      "evidence": ["u100_e01_p02", "convo:u100_e01_p02[0]"]
+    },
+    {
+      "qid": "qa_003",
+      "question": "Where did Miguel meet them?",
+      "answer_gold": "Rose garden at Golden Gate Park",
+      "evidence": ["u100_e01_p03"]
+    },
+    {
+      "qid": "qa_004",
+      "question": "Did Miguel arrive before or after lunch?",
+      "answer_gold": "After lunch (around 12:30)",
+      "evidence": ["u100_e01_p03", "convo:u100_e01_p03[0]"]
+    },
+    {
+      "qid": "qa_005",
+      "question": "List everyone who attended the picnic event.",
+      "answer_gold": ["John Lee", "Anna Lee", "Miguel Torres"],
+      "evidence": ["u100_e01"]
+    }
+  ]
+}
